@@ -69,7 +69,7 @@ export default function Account({ session }: { session: Session }) {
     }
 
     return (
-        <div>
+        <div className='card'>
             <div>
                 <label>Email</label>
                 <input type="email" value={session?.user?.email || ''} disabled />
@@ -93,16 +93,13 @@ export default function Account({ session }: { session: Session }) {
                 />
             </div>
 
-            <div>
+            <div className='btns'>
                 <button
                     onClick={() => updateProfile({ username, website, avatar_url: avatarUrl })}
                     disabled={loading}
                 >
                     {loading ? 'Loading ...' : 'Update'}
                 </button>
-            </div>
-
-            <div>
                 <button onClick={() => supabase.auth.signOut()}>
                     Sign Out
                 </button>

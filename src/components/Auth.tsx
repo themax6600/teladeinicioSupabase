@@ -48,7 +48,7 @@ export default function Auth() {
     }, []);
 
     return (
-        <div>
+        <div className='card'>
             <div>
                 <label>Email</label>
                 <input
@@ -69,7 +69,7 @@ export default function Auth() {
                 />
             </div>
 
-            <div>
+            <div className='btns'>
                 <button onClick={signInWithEmail} disabled={loading}>
                     Sign in
                 </button>
